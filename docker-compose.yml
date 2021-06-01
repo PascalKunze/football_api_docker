@@ -1,0 +1,22 @@
+version: "3"
+services:
+
+  http-php:
+    build:
+      context: ./
+    container_name: fussball-php
+    volumes:
+      - /var/www/html/fußball_api_projekt/html:/var/www/html/
+      - ./php/php-ini-overrides.ini:/usr/local/etc/php/conf.d/overrides.ini:ro
+    ports:
+      - "127.0.0.1:9642:9642"
+  mysql:
+    image: mysql:5.7
+    volumes:
+    - /var/www/html/fußball_api_projekt/mysql:/var/lib/mysql
+    container_name: fussball-mysql
+    ports:
+      - "127.0.0.1:9857:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: root
