@@ -4,7 +4,7 @@
 2. Erstelle in diesem Ordner  weiter Ordner:
   - mkdir html
   - mkdir mysql
-3. Bleib im "fußball_api_projekt" Verzeichniss und kopiere das git repo: PascalKunze/fußball_api_docker
+3. Bleib im "fußball_api_projekt" Verzeichniss und kopiere das git repo: PascalKunze/football_api_docker
   - cd /var/www/html/fußball_api_projekt/
   - git clone git@github.com:PascalKunze/football_api_docker.git
 4. Bearbeite die docker-compose-yml:
